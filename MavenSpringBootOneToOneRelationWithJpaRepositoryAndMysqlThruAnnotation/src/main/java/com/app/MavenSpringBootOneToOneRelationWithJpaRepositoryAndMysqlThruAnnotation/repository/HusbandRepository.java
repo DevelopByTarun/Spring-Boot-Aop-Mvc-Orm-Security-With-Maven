@@ -1,0 +1,7 @@
+package com.app.MavenSpringBootOneToOneRelationWithJpaRepositoryAndMysqlThruAnnotation.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import com.app.MavenSpringBootOneToOneRelationWithJpaRepositoryAndMysqlThruAnnotation.dto.Husband;
+
+public interface HusbandRepository extends JpaRepository<Husband, Integer>{
+}

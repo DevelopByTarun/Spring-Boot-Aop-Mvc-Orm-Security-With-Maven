@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+	
+	<bean id="loggingObject" class="com.app.MavenSpringBootAopBeforeAfterAdviceWithPointcutThruAspectJXml.aspect.LoggingAspect">
+	</bean>
+	
+	<!-- create aspect configuration -->
+	<aop:config>
+		<aop:aspect id="myAspect" ref="loggingObject">
+			<aop:pointcut expression="execution(* com.app.MavenSpringBootAopBeforeAfterAdviceWithPointcutThruAspectJXml.service.IService.*(..))" id="applyPointcutDate"/>
+				<aop:before method="showExecutionDate" pointcut-ref="applyPointcutDate"/>
+				
+			<aop:pointcut expression="execution(public * com.app.MavenSpringBootAopBeforeAfterAdviceWithPointcutThruAspectJXml.service.IService.*(..))" id="applyPointcutTime"/>
+				<aop:before method="calculateStartTime" pointcut-ref="applyPointcutTime"/>
+				<aop:after method="calculateEndTime" pointcut-ref="applyPointcutTime"/>
+		</aop:aspect>
+	</aop:config>
+</beans>

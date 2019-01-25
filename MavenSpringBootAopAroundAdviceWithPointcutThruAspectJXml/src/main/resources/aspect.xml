@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+	
+	<bean id="loggingObject" class="com.app.MavenSpringBootAopAroundAdviceWithPointcutThruAspectJXml.aspect.LoggingAspect">
+	</bean>
+	
+	<!-- create aspect configuration -->
+	<aop:config>
+		<aop:aspect id="myAspect" ref="loggingObject">
+			<aop:pointcut expression="within(com.app.MavenSpringBootAopAroundAdviceWithPointcutThruAspectJXml.service.*)" id="totalTimeTaken"/>
+				<aop:around method="totalTimeTakenForThis" pointcut-ref="totalTimeTaken"/>
+		
+			<aop:pointcut expression="execution(public * com.app.MavenSpringBootAopAroundAdviceWithPointcutThruAspectJXml.service.IService.getEmployee())" id="applyGetEmployee"/>
+				<aop:around method="aroundGetEmployee" pointcut-ref="applyGetEmployee"/>
+		
+			<aop:pointcut expression="execution(public * com.app.MavenSpringBootAopAroundAdviceWithPointcutThruAspectJXml.service.IService.getEmployeeAddress())" id="applyGetEmployeeAddress"/>
+				<aop:around method="aroundGetEmployeAddress" pointcut-ref="applyGetEmployeeAddress"/>
+		
+			<aop:pointcut expression="execution(public * com.app.MavenSpringBootAopAroundAdviceWithPointcutThruAspectJXml.service.IService.getEmployeeWithAddress())" id="applyGetEmployeeWithAddress"/>
+				<aop:around method="aroundGetEmployeeWithAddress" pointcut-ref="applyGetEmployeeWithAddress"/>
+		
+			<aop:pointcut expression="execution(public * com.app.MavenSpringBootAopAroundAdviceWithPointcutThruAspectJXml.service.IService.getStudent())" id="applyGetStudent"/>
+				<aop:around method="aroundGetStudent" pointcut-ref="applyGetStudent"/>
+		
+			<aop:pointcut expression="execution(public * com.app.MavenSpringBootAopAroundAdviceWithPointcutThruAspectJXml.service.IService.getStudentAddress())" id="applyGetStudentAddress"/>
+				<aop:around method="aroundGetStudentAddress" pointcut-ref="applyGetStudentAddress"/>
+		
+			<aop:pointcut expression="execution(public * com.app.MavenSpringBootAopAroundAdviceWithPointcutThruAspectJXml.service.IService.getStudentWithAddress())" id="applyGetStudentWithAddress"/>
+				<aop:around method="aroundGetStudentWithAddress" pointcut-ref="applyGetStudentWithAddress"/>
+		</aop:aspect>
+	</aop:config>
+</beans>

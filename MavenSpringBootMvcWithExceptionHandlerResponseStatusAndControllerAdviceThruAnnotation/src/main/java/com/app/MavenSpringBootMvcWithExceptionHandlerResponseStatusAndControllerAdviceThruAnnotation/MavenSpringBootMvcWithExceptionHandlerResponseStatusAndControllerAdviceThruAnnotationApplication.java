@@ -1,0 +1,16 @@
+package com.app.MavenSpringBootMvcWithExceptionHandlerResponseStatusAndControllerAdviceThruAnnotation;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
+
+@ComponentScan(basePackages = "com.app.MavenSpringBootMvcWithExceptionHandlerResponseStatusAndControllerAdviceThruAnnotation")
+@EnableAutoConfiguration
+@SpringBootApplication
+public class MavenSpringBootMvcWithExceptionHandlerResponseStatusAndControllerAdviceThruAnnotationApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(MavenSpringBootMvcWithExceptionHandlerResponseStatusAndControllerAdviceThruAnnotationApplication.class, args);
+	}
+}
