@@ -1,0 +1,67 @@
+package com.app.MavenSpringBootMvcJqueryAjaxIntegrationWithGetPostThruAnnotation.model;
+
+import javax.validation.constraints.NotBlank;
+import org.springframework.stereotype.Component;
+
+@Component
+public class Customer {
+	
+	@NotBlank
+	private String name;
+	
+	@NotBlank
+	private int age;
+	
+	@NotBlank
+	private String city;
+
+	/**
+	 * default constructor
+	 */
+	public Customer() {
+		// TODO Auto-generated constructor stub
+		System.out.println("Customer Default Constructor Is Called");
+	}
+
+	/**
+	 * @return the name
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * @param name the name to set
+	 */
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	/**
+	 * @return the age
+	 */
+	public int getAge() {
+		return age;
+	}
+
+	/**
+	 * @param age the age to set
+	 */
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	/**
+	 * @return the city
+	 */
+	public String getCity() {
+		return city;
+	}
+
+	/**
+	 * @param city the city to set
+	 */
+	public void setCity(String city) {
+		this.city = city;
+	}
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	  <title>Spring Boot - AJAX POST GET Example</title>
+	  <meta charset="utf-8" />
+	  <meta name="viewport" content="width=device-width, initial-scale=1" />
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	  <script src="/js/postrequest.js"></script>
+      <script src="/js/getrequest.js"></script>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<br/>
+			<h2 style="color:blue; text-align:center;">GET-POST Jquery Ajax Example</h2>
+			<br/>
+			<div>
+			<form id="customerForm">
+  <div class="form-group row">
+    <label for="name" class="col-sm-2 col-form-label"><strong>Name&nbsp;::</strong></label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="name" placeholder="Enter Name">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="age" class="col-sm-2 col-form-label"><strong>Age&nbsp;::</strong></label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="age" placeholder="Enter Age">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="city" class="col-sm-2 col-form-label"><strong>City&nbsp;::</strong></label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="city" placeholder="Enter City">
+    </div>
+  </div>
+  <div class="form-group row">
+  <label for="inputEmail3" class="col-sm-2 col-form-label"></label>
+    <div class="col-sm-10">
+      <button type="submit" class="btn btn-warning">Add Customer Details</button>
+    </div>
+  </div>
+</form>	
+	</div>
+	<br/>
+	<br/>
+	<div class="col-sm-7" id="postResultDiv"></div>
+	<br/>
+	<br/>
+	<div class="col-sm-7" style="margin:20px 0px 20px 0px">
+		<button id="getAllCustomerId" type="button" class="btn btn-danger">Get All Customers</button>
+		<div id="getResultDiv" style="padding:20px 10px 20px 50px">
+	        <ul class="list-group alert alert-info">
+	    	</ul>
+    	</div>
+	</div>
+	<br/>
+		</div>
+	</div>
+</div>
+</body>
+</html>

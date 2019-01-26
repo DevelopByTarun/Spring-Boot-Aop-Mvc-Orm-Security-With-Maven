@@ -1,0 +1,32 @@
+
+.enter {
+	text-align: center;
+	font-family: verdana;
+	text-transform: capitalize;
+	color: blue;
+}
+
+.show {
+	text-align: center;
+	font-family: arialblack;
+	text-transform: capitalize;
+	color: forestgreen;
+}
+
+.repeat {
+	text-align: center;
+	font-family: serif;
+	text-transform: capitalize;
+	color: brown;
+}
+
+.heading {
+	text-align: center;
+	font-family: cursive;
+	text-transform: capitalize;
+	color: aquamarine;
+}
+
+table tbody {
+	text-align: center;
+}
