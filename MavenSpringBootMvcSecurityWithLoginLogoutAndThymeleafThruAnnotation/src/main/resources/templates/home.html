@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+<title>Home.Html</title>
+<style>
+.open {
+	text-align: center;
+	text-transform: capitalize;
+	font-family: Tahoma;
+	color: green;
+}
+</style>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+		<br/><br/>
+			<h1 class="open">Hello, This is Home page!</h1>
+			<br/>
+	<h3>
+	<a style="color: blue" th:href="@{/user}">User Page</a>
+	<br/><br/>
+	<a style="color: blue" th:href="@{/admin}">Admin Page</a>
+	</h3>
+		</div>
+	</div>
+</div>
+</body>
+</html>

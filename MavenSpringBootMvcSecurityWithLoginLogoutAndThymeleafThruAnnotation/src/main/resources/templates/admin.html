@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+<title>Admin.Html</title>
+<style>
+.head {
+	text-align: center;
+	text-transform: capitalize;
+	font-family: cursive;
+	color: yellow;
+}
+</style>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+		<br/><br/>
+			<h1 class="head">Hello, the page is for Admin!</h1>
+			<br/>
+	<h3><a style="color: blue" th:href="@{/}">Home</a></h3>
+	<br/><br/>
+	<form th:action="@{/logout}" method="post">
+		<input type="submit" class="btn btn-primary" value="Sign Out" />
+	</form>
+		</div>
+	</div>
+</div>
+</body>
+</html>
